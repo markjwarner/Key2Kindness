@@ -1,0 +1,8 @@
+runtime: nodejs16
+handlers:
+- url: /(.*\.(gif|media|json|ico|eot|ttf|woff|woff2|png|jpg|css|js))$
+  static_files: key2kindness-platform/build/\1
+  upload: key2kindness-platform/build/(.*)
+- url: /(.*)
+  static_files: key2kindness-platform/build/index.html
+  upload: key2kindness-platform/build/index.html
